@@ -28,11 +28,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btnGo = findViewById(R.id.btnGo);
         eT = findViewById(R.id.eT);
+        wV = findViewById(R.id.wV);
 
 
 
     }
+    @SuppressLint("SetJavaScriptEnabled")
     public void Go(View view) {
+        Adress = eT.getText().toString();
+        wV.getSettings().setJavaScriptEnabled(true);
+        wV.loadUrl(Adress);
+
+
 
     }
 }
